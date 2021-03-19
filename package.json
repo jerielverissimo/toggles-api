@@ -22,6 +22,11 @@
   },
   "devDependencies": {
     "@stryker-mutator/core": "^4.5.1",
-    "jest": "^26.6.3"
+    "jest": "^26.6.3",
+    "stryker-api": "^0.24.1",
+    "stryker-baseline-reporter": "^1.0.3",
+    "stryker-html-reporter": "^0.18.1",
+    "stryker-javascript-mutator": "^0.14.1",
+    "stryker-jest-runner": "^1.4.1"
   }
 }
