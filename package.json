@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "stryker":"node_modules/.bin/stryker run",
     "test": "jest"
   },
   "repository": {
