@@ -2,9 +2,9 @@
   "name": "toggles-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main/index.js",
   "scripts": {
-    "stryker":"node_modules/.bin/stryker run",
+    "stryker": "node_modules/.bin/stryker run",
     "test": "jest"
   },
   "repository": {
