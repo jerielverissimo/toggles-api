@@ -1,10 +1,9 @@
-module.exports = function(config) {
-  config.set({
-    mutator: "javascript",
-    packageManager: "npm",
-    reporters: ["baseline", "html", "clear-text", "progress", "dashboard"],
-    testRunner: "jest",
-    transpilers: [],
-    coverageAnalysis: "off"
-  });
+/**
+ * @type {import('@stryker-mutator/api/core').StrykerOptions}
+ */
+module.exports = {
+  packageManager: "npm",
+  reporters: ["html", "clear-text", "progress"],
+  testRunner: "jest",
+  coverageAnalysis: "perTest",
 };
