@@ -11,7 +11,7 @@ const toggleController= {
         }
         catch(error){
             console.log(error);
-            res.status(500).send(`${error}`);
+            return res.status(500).send(`${error}`);
         }
     }
 };
