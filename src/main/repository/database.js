@@ -32,6 +32,32 @@ const database={
             await conn.close();
 
         }  
+    },
+
+    async find(){
+
+        const conn = new MongoClient (uri, options);
+
+        try {
+            
+            await conn.connect();
+
+            const db = conn.db('db-toggles');
+
+            const collection = db.collection('toggles');
+
+            return await collection.find().toArray();
+
+        } catch (error) {
+
+            console.log(error);
+            throw new Error(error);
+        
+        } finally {
+
+            await conn.close();
+
+        }  
     }
 };
 module.exports=database;

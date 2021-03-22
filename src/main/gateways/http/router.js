@@ -2,7 +2,7 @@ const toggleController=require("./toggleController");
 
 module.exports = (router) =>{
     router.get('/toggles', (req, res) => {
-        res.send(['Rede', 'number']);
+        toggleController.list(req, res)
     });
 
     router.post('/toggle', (req, res) => {

@@ -13,6 +13,18 @@ const toggleController= {
             console.log(error);
             return res.status(500).send(`${error}`);
         }
+    },
+
+    async list(req, res) {
+        try{
+            let result = await database.find();
+            result = result.map(document => ({name: document.name, value:document.value}));
+            res.status(200).send(result);            
+        }
+        catch(error){
+            console.log(error);
+            return res.status(500).send(`${error}`);
+        }
     }
 };
 
