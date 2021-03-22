@@ -8,12 +8,29 @@ const options = {
 }; 
 
 const database={
-    async upsert(document){
+    async insert(document){
+
+        const conn = new MongoClient (uri, options);
+
         try {
-        const conn = new MongoClient (uri, options)
+            
+            await conn.connect();
+
+            const db = conn.db('db-toggles');
+
+            const collection = db.collection('toggles');
+
+            await collection.insertOne(document);
+
         } catch (error) {
+
+            console.log(error);
         
-        }    
+        } finally {
+
+            await conn.close();
+
+        }  
     }
 };
 module.exports=database;
