@@ -1,3 +1,4 @@
+const { insert } = require("../../repository/database");
 const database=require("../../repository/database");
 
 const toggleController= {
@@ -5,7 +6,7 @@ const toggleController= {
         try{
             const payload = req.body;
             console.log(payload);
-
+            await database.insert(payload);
             res.status(200).send('Deu Sucesso!');            
         }
         catch(error){
