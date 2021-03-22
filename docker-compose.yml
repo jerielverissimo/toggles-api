@@ -1,0 +1,9 @@
+version: '3'
+services: 
+  database:
+    image: 'mongo'
+    container_name: 'my-mongo-container'
+    environment: 
+      - MONGO_INITDB_DATABASE=db-toggles
+    ports:
+      - '27017:27017'
