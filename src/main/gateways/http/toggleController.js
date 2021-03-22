@@ -1,6 +1,11 @@
+const database=require("../../repository/database");
+
 const toggleController= {
     async add(req, res) {
         try{
+            const payload = req.body;
+            console.log(payload);
+
             res.status(200).send('Deu Sucesso!');            
         }
         catch(error){
